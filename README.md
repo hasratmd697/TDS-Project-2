@@ -4,7 +4,7 @@ This project implements an automated system to solve dynamic quizzes using an LL
 
 ## Project Structure
 
-- **`receive_requests.py`**: The main FastAPI application. It exposes an endpoint `/receive_request` that:
+- **`main.py`**: The main FastAPI application. It exposes an endpoint `/receive_request` that:
   1.  Accepts a JSON payload with user details and a target URL.
   2.  Prompts an LLM (via AIPIPE) to generate a Python script tailored to the quiz found at the URL.
   3.  Saves the generated code to `generated_script.py`.
@@ -59,7 +59,7 @@ This project implements an automated system to solve dynamic quizzes using an LL
 ## Workflow
 
 1.  `send_request.py` sends a POST request to `http://localhost:8000/receive_request`.
-2.  `receive_requests.py` validates the secret.
+2.  `main.py` validates the secret.
 3.  A background task is started which:
     - Constructs a prompt describing the task (scraping, data processing, etc.).
     - Calls the AIPIPE API to generate a Python solution.
