@@ -6,7 +6,7 @@ load_dotenv()
 
 # Replace with your deployed URL
 # Example: https://your-project-name.vercel.app
-DEPLOYED_URL = "https://tds-project-2-khaki.vercel.app/"
+DEPLOYED_URL = "https://tds-project-2-alpha.vercel.app/"
 if not DEPLOYED_URL.endswith("/"):
     DEPLOYED_URL += "/"
 
